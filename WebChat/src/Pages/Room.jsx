@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import client, { database , DATABASE_ID, COLLECTION_ID_MESSAGES } from "../appwriteConfig"
 import { ID, Query } from "appwrite";
 import {Trash2} from 'react-feather'
+import Header from '../components/Header'
+
 
 const Room = () => {
 
@@ -71,6 +73,7 @@ const Room = () => {
 
   return (
    <main className="container">
+     <Header/>
 
      <div className="room--container">
        <form id="message--form" onSubmit={handleSubmit} >
@@ -96,7 +99,7 @@ const Room = () => {
             <div className="message--header">
               <small className="message-timestamp">{new Date(message.$createdAt).toLocaleString()}</small>
               <Trash2 
-                  className="message--btn"
+                  className="message--btn "
                   onClick={() => {deleteMessage(message.$id)}}
               />
           

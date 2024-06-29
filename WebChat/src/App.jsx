@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import LoginPage from './Pages/LoginPage'
 import PrivateRoutes from './components/PrivateRoutes'
 import { AuthProvider } from './utils/AuthContext'
+import RegisterPage from './Pages/RegisterPage'
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
       <AuthProvider>
       <Routes> 
         <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/register' element={<RegisterPage/>}/>
         <Route element={<PrivateRoutes/>}>
         <Route path='/' element={<Room/>}/>
         </Route>

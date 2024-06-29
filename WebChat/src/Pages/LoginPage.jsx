@@ -1,6 +1,7 @@
 import   { useEffect, useState } from 'react'
 import { userAuth } from '../utils/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
    const {user, handleUserLogin} = userAuth()
@@ -55,7 +56,7 @@ const LoginPage = () => {
               <input className='btn btn--lg btn--main' type="submit" value="Login" />
             </div>
          </form>
-
+         <p>Dont have an account? Register <Link to="/register">here</Link></p>
       </div>
     
     </div>
