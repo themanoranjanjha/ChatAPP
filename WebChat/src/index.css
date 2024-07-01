@@ -156,15 +156,41 @@ input[type="text"], input[type="password"], input[type="email"], textarea{
   align-items: center;
 }
 
-.message--body{
+.message-box{
+  display: flex;
   padding: 0.5em 0;
-  color: var(--textColorSecondary);
-  background-color: var(--themeColorMain);
+  /* color: var(--textColorSecondary); */
+  /* background-color: rgb(228, 103, 13); */
+  object-fit: cover;
   padding: 1em;
   border-radius: 20px;
   width:fit-content;
   max-width: 100%;
-  word-wrap: break-word; /* added */
+  word-wrap: break-word;
+}
+.message--body{
+  float: left;
+  padding: 0.5em 0;
+  color: var(--textColorSecondary);
+  background-color: #00A884;
+  object-fit: cover;
+  padding: 1em;
+  border-radius: 20px;
+  width:fit-content;
+  max-width: 100%;
+  word-wrap: break-word;
+  border: 1px solid rgba(219,26,90,1);
+}
+.left-side{
+  padding: 0.5em 0;
+  color: var(--textColorSecondary);
+  background-color: var( --themeColorMain);
+  object-fit: cover;
+  padding: 1em;
+  border-radius: 20px;
+  width:fit-content;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .message--body--owner{
